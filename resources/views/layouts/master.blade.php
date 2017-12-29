@@ -30,6 +30,9 @@
             </div>
         </div>
         <div class="container">
+            @if ($message = session('message'))
+                <div class="alert alert-success">{{ $message }}</div>
+            @endif
             <div class="row">
                 <div class="col-sm-8 blog-main">
                     @yield('content')
